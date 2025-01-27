@@ -5,13 +5,9 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "scripts": {
-    "lint": "eslint . && prettier --check .",
-    "fix": "eslint . --fix && prettier --write ."
-  },
-  "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "lint": "eslint . && prettier --check . && tsc --noEmit",
+    "fix": "eslint . --fix && prettier --write .",
+    "test": "vitest"
   },
   "dependencies": {
     "@codemirror/commands": "^6.3.2",
@@ -24,5 +20,11 @@
     "highlight.js": "^11.9.0",
     "markdown-it": "^14.1.0",
     "xss": "^1.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "vitest": "^3.0.4"
   }
 }

@@ -1,5 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
+// TODO: Replace with more generic methods
 export const isApproved = (project) => {
   return project && APPROVED_PROJECT_STATUSES.includes(project.status)
 }
